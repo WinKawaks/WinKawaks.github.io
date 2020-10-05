@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Not Found</title>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type="text/css">
+		body{
+			font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+			margin: 0;
+			padding:0;
+		}
+		video{
+			position: fixed;
+			bottom: 0px;
+			right: 0px;
+			min-width: 100%;
+			min-height: 100%;
+			height: auto;
+			width: auto;
+		}
+		source{
+			min-width: 100%;  
+	        min-height: 100%;  
+	        height: auto;  
+	        width: auto;  
+		}
+		a {
+			text-decoration: none;
+		}
+		.text{
+			position: absolute;
+			text-align: center;
+			z-index: 999;
+			left:0;
+			right: 0;
+			top:0;
+			bottom: 0;
+			margin: auto;
+			font-size: 50px;
+			color: #fff;
+			padding-top: 5%;
+			overflow: hidden;
+		}
+		.text p{
+			width: 100%;
+			letter-spacing: 10px;
+		}
+		.goback{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:300px;
+			bottom:0;
+			margin: auto;
+			z-index: 999;
+			color: #fff;
+			width: 200px;
+			height: 80px;
+			font-size: 40px;
+			text-align: center;
+			padding-top: 10px;
+			cursor: pointer;
+		}
+		#home-discover-link {
+			width: 126px;
+			margin: 0 auto 15px auto;
+		}
+		#home-discover-link:hover {
+			position: relative;
+		    width: 147px;
+		    background: #FFF;
+		    color: #181819;
+		    padding-right: 27px;
+		}
+		.btn-boxy {
+			position: relative;
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			overflow: hidden;
+			background: none;
+			text-align: center;
+			line-height: 43px;
+			border: solid 2px #fff;
+			font-family: "franklin-gothic-ext-comp-urw", sans-serif;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-style: normal;
+			color: #fff;
+			letter-spacing: 3px;
+			font-size: 20px;
+			color: #FFF;
+			-webkit-animation-fill-mode: both;
+			-moz-animation-fill-mode: both;
+			-ms-animation-fill-mode: both;
+			-o-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation-duration: 1s;
+			-moz-animation-duration: 1s;
+			-ms-animation-duration: 1s;
+			-o-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-name: fadeIn;
+			-moz-animation-name: fadeIn;
+			-o-animation-name: fadeIn;
+			animation-name: fadeIn;
+			-webkit-animation-delay: 2s;
+			-moz-animation-delay: 2s;
+			-ms-animation-delay: 2s;
+			-o-animation-delay: 2s;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-ms-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			letter-spacing: 2px
+		}
+		.btn-boxy span {
+		    position: absolute;
+		    display: block;
+		    width: 0px;
+		    height: 50px;
+		    top: -4px;
+		    right: 7px;
+		    -webkit-transition: all .2s ease-in-out;
+		    -moz-transition: all .2s ease-in-out;
+		    -ms-transition: all .2s ease-in-out;
+		    -o-transition: all .2s ease-in-out;
+		    transition: all .2s ease-in-out;
+		    background: url(http://www.tingxiangshuixie.com/assets/img/button.png) no-repeat 0 0;
+		}
+		@media screen and (max-width: 800px) {
+			video {
+				display: none;
+			}
+			.text {
+				background: url(http://www.tingxiangshuixie.com/assets/img/NASA.png) no-repeat 0 0;
+				background-size: 100% 100%;
+			}
+			.text p {
+			    display: none;
+			}
+		}
+		@font-face{
+			font-family:franklin-gothic-ext-comp-urw;
+			src:url(https://use.typekit.net/af/1bfe91/0000000000000000000118c0/27/l?subset_id=2&fvd=n7&v=3) 
+			format("woff2"),url(https://use.typekit.net/af/1bfe91/0000000000000000000118c0/27/d?subset_id=2&fvd=n7&v=3) 
+			format("woff"),url(https://use.typekit.net/af/1bfe91/0000000000000000000118c0/27/a?subset_id=2&fvd=n7&v=3) 
+			format("opentype");
+			font-weight:700;
+			font-style:normal;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<video autoplay loop id='video'>
+			<source src="http://www.tingxiangshuixie.com/assets/img/NASA.mp4" type="video/mp4">
+		</video>
+		<div class="text"><p>我以光速在宇宙中搜寻</p><p>始终无法找到你的身影</p></div>
+		<div class="goback">
+			<a href="http://www.tingxiangshuixie.com" class="discover btn-boxy" id="home-discover-link">Go Back<span></span></a>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.playbackRate = 0.5;
+	document.querySelector('.goback').addEventListener('click',function () {
+		window.location.href="http://www.tingxiangshuixie.com";
+	})
+	document.getElementById('home-discover-link').onmouseover = function() {
+		this.childNodes[1].style.width = '25px';
+	}
+	document.getElementById('home-discover-link').onmouseout = function() {
+		this.childNodes[1].style.width = '0px';
+	}
+</script>
